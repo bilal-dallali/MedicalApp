@@ -29,8 +29,8 @@ struct Doctor {
     let adress: String
 }
 
-let doctorList = {
-    Doctor(doctorName: "Dr. Alana Rueter", image: "doctor-1", speciality: "Dentiste", adress: "82 avenue Foch, 76600 Le Havre");
-    Doctor(doctorName: "Dr. Joseph Nichols", image: "doctor-2", speciality: "Cardiologue", adress: "76 rue des Cerisiers, 76620 Le Havre");
+let doctorList = [
+    Doctor(doctorName: "Dr. Alana Rueter", image: "doctor-1", speciality: "Dentiste", adress: "82 avenue Foch, 76600 Le Havre"),
+    Doctor(doctorName: "Dr. Joseph Nichols", image: "doctor-2", speciality: "Cardiologue", adress: "76 rue des Cerisiers, 76620 Le Havre"),
     Doctor(doctorName: "Dr. Daphne Figueroa", image: "doctor-3", speciality: "Pneumologue", adress: "7 rue Louis Blanc, 76620 Le Havre")
-}
+]

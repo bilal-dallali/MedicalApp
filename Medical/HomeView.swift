@@ -87,8 +87,12 @@ struct HomeView: View {
                     }
                     ScrollView {
                         VStack(spacing: 12) {
-                            ForEach(0..<5) {_ in
-                                DoctorCellView()
+                            ForEach(doctorList, id: \.doctorName) { doctor in
+                                NavigationLink {
+                                    DoctorCellView(doctor: doctorList[2])
+                                } label: {
+                                    DoctorCellView(doctor: doctor)
+                                }
                             }
                         }
                     }

@@ -9,33 +9,38 @@ import SwiftUI
 
 struct DoctorCellView: View {
     
+    let doctor: Doctor
     
     var body: some View {
         HStack(spacing: 14) {
-            Image("doctor-1")
+            Image(doctor.image)
                 .resizable()
                 .frame(width: 82, height: 110)
                 .cornerRadius(5)
             
             VStack {
+                Spacer()
                 HStack {
-                    Text("Dr. Alana Rueter")
+                    Text(doctor.doctorName)
                         .font(.system(size: 16, weight: .medium))
                         .foregroundColor(Color("FontColor1"))
                     Spacer()
                 }
+                Spacer()
                 HStack {
-                    Text("Dentiste")
+                    Text(doctor.speciality)
                         .font(.system(size: 14, weight: .regular))
                         .foregroundColor(Color("FontColor3"))
                     Spacer()
                 }
+                Spacer()
                 HStack {
-                    Text("83 avenue Foch, 76600 Le Havre")
+                    Text(doctor.adress)
                         .font(.system(size: 12, weight: .light))
                         .foregroundColor(Color("FontColor3"))
                     Spacer()
                 }
+                Spacer()
                 HStack {
                     Button {
                         print("prendre rdv")
@@ -44,7 +49,7 @@ struct DoctorCellView: View {
                             .foregroundColor(.white)
                             .font(.system(size: 12, weight: .medium))
                     }
-                    .frame(width: 200, height: 28)
+                    .frame(width: 180, height: 28)
                     .background(Color("MainColor"))
                     .cornerRadius(5)
                     Spacer()
@@ -64,6 +69,7 @@ struct DoctorCellView: View {
         
         .padding(.leading, 10)
         .padding(.trailing, 21)
+        .padding(.vertical, 10)
         .frame(height: 130)
         .background(.white)
         .cornerRadius(10)
@@ -72,7 +78,7 @@ struct DoctorCellView: View {
 
 struct DoctorCellView_Previews: PreviewProvider {
     static var previews: some View {
-        DoctorCellView()
+        DoctorCellView(doctor: doctorList[2])
             .previewLayout(.sizeThatFits)
             .background(.gray)
     }
